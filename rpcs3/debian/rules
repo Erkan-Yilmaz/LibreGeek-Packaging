@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# See: https://github.com/RPCS3/rpcs3/blob/master/.travis.yml
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+
+override_dh_clean:
+
+override_dh_auto_build:
+	cmake -DCMAKE_CXX_COMPILER=clang++ \
+	-DCMAKE_C_COMPILER=clang \
+	-DCMAKE_INSTALL_PREFIX=/usr \
